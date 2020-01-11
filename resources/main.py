@@ -3,7 +3,7 @@ from PyQt5.QtGui import QGuiApplication, QIcon
 from PyQt5.QtQml import QQmlApplicationEngine
 
 app = QGuiApplication(sys.argv)
-app.setWindowIcon('resources/images/calculator-icon-256-348653001.png')
+app.setWindowIcon(QIcon('resources/images/calculator-icon-256-348653001.png'))
 
 engine = QQmlApplicationEngine()
 engine.load('resources/qml/main.qml')
