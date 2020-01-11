@@ -1,12 +1,12 @@
-import  sys
+import sys
 from PyQt5.QtGui import QGuiApplication, QIcon
 from PyQt5.QtQml import QQmlApplicationEngine
 
 app = QGuiApplication(sys.argv)
-app.setWindowIcon(QIcon('resources/images/calculator-icon-256-348653001.png'))
+app.setWindowIcon(QIcon('/home/familiasilva/Documentos/2020/projetos python/novaCalcProjectWillian/Calculator/resources/images/calculator-icon-256-348653001.png'))
 
 engine = QQmlApplicationEngine()
-engine.load('resources/qml/main.qml')
+engine.load('/home/familiasilva/Documentos/2020/projetos python/novaCalcProjectWillian/Calculator/resources/qml/main.qml')
 engine.quit.connect(app.quit)
 
 sys.exit(app.exec_())
