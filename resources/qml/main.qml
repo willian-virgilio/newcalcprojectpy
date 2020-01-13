@@ -11,6 +11,7 @@ ApplicationWindow{
     color: "#1766cf"
 
     property bool  fullsize: width < height
+    property string screeProblem: "3344213423423423424"
 
 
     ColumnLayout{
@@ -29,21 +30,36 @@ ApplicationWindow{
          anchors.rightMargin: 8
          anchors.verticalCenter: parent.verticalCenter
 
-         Rectangle{
-         Layout.preferredWidth: 48
-         Layout.preferredHeight: 48
-         Layout.maximumWidth: parent.parent.width
-         color:"dodgerblue"
-         Layout.alignment: Qt.AlignRight
-         }
+             Rectangle{
+             Layout.preferredWidth: scr_lab.width
+             Layout.preferredHeight: 48
+             Layout.maximumWidth: parent.parent.width
+             Layout.alignment: Qt.AlignRight
 
-         Rectangle{
-         Layout.preferredWidth: 48
-         Layout.preferredHeight: 48
-         Layout.maximumWidth: parent.parent.width
-         color:"lightgray"
-         Layout.alignment: Qt.AlignRight
-         }
+             Flickable{
+                 width: parent.width
+                 height: parent.height
+                 contentWidth: scr_lab.width
+                 contentHeight: scr_lab.height
+                 flickableDirection: Flickable.HorizontalFlick
+                 Label{
+                     id:scr_lab
+                      text:screeProblem
+                      textFormat: Text.RichText
+                      font.family: "Sergoe UI Semilight"
+                      font.pixelSize: 42
+                      leftPadding: 8
+
+                 }
+             }
+             }
+
+             Rectangle{
+             Layout.preferredWidth: 48
+             Layout.preferredHeight: 48
+             Layout.maximumWidth: parent.parent.width
+             Layout.alignment: Qt.AlignRight
+             }
          }
 
 
